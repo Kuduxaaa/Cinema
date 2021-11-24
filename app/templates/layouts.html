@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ka_GE">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/img/logo-whitout-bg.png') }}">
+    
+    <title>Play — {% block title %}ფილმები ქართულად{% endblock %}</title>
+
+    <meta property="og:title" content="Play — {{ self.title() }}"/>
+    <meta property="og:site_name" content="Play"/>
+    <meta property="og:type" content="website"/>
+
+    {% block stylesheets %}
+        <link href="{{ url_for('static', filename='assets/css/app.css') }}" rel="stylesheet">
+    {% endblock %}
+    
+</head>
+<body>
+
+    {% block content %}{% endblock %}
+
+
+    {% block javascripts %}
+        <script src="{{ url_for('static', filename='assets/js/app.js') }}" type="text/javascript"></script>
+    {% endblock %}
+
+</body>
+</html>
